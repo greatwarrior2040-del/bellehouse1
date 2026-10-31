@@ -85,7 +85,7 @@
     .menu-toggle.open::after { transform: translateY(-7px) rotate(-45deg); }
     .menu-toggle.open span { opacity: 0; }
 
-    .hero { position: relative; height: 420vh; overflow: visible; color: #fff; background: var(--navy); }
+    .hero { position: relative; height: 240vh; overflow: visible; color: #fff; background: var(--navy); }
     .hero-stage { position: sticky; top: 0; height: 100vh; min-height: 720px; overflow: hidden; color: #fff; background: var(--navy); }
     .hero-backdrop { position: absolute; inset: -3%; background: linear-gradient(110deg, rgba(0,20,40,.98) 0%, rgba(4,51,80,.9) 45%, rgba(15,92,142,.7) 100%), radial-gradient(circle at 80% 22%, rgba(238,11,69,.24), transparent 28%), linear-gradient(140deg, #001b31, #2e7596); transform: scale(calc(1 + var(--hero-scale, 0))); transition: transform .1s linear; }
     .hero-backdrop::before { content: ""; position: absolute; inset: -10%; opacity: .35; background: linear-gradient(125deg, transparent 0 34%, rgba(255,255,255,.1) 34.1% 34.35%, transparent 34.45% 58%, rgba(238,11,69,.35) 58.15% 58.35%, transparent 58.45% 100%), repeating-linear-gradient(90deg, transparent 0 98px, rgba(255,255,255,.07) 99px, transparent 100px), repeating-linear-gradient(0deg, transparent 0 108px, rgba(255,255,255,.06) 109px, transparent 110px); transform: perspective(700px) rotateX(54deg) translateY(15%) scale(1.4); transform-origin: center bottom; }
@@ -105,7 +105,8 @@
     .eyebrow::before { content: ""; width: 34px; height: 1px; background: currentColor; }
     h1, h2, h3, p { margin-top: 0; }
     .hero h1 { max-width: 760px; margin-bottom: 28px; font: 600 clamp(54px, 7vw, 105px)/.92 "Space Grotesk", sans-serif; letter-spacing: -.065em; text-wrap: balance; text-shadow: var(--tshadow); }
-    .hero h1 span { display: block; opacity: 0; transform: translateY(30px); }
+    .hero h1 span { display: block; opacity: 1; transform: none; }
+    .hero-ready .hero h1 span { opacity: 0; transform: translateY(30px); }
     .hero-ready .hero h1 span:nth-child(1) { animation: heroTextIn .9s var(--soft-ease) .12s both; }
     .hero-ready .hero h1 span:nth-child(2) { animation: heroTextIn .9s var(--soft-ease) .22s both; }
     .hero-ready .hero-copy .eyebrow { animation: heroTextIn .7s var(--soft-ease) both; }
@@ -260,6 +261,69 @@
     .form-success { display: none; margin-top: 16px; padding: 14px; color: var(--blue-deep); background: rgba(143,196,220,.24); font-size: 13px; }
     .form-success.show { display: block; }
 
+    /* Homepage reference rhythm: image-led expertise, dark references and editorial closing blocks. */
+    .craft-showcase { color: #fff; background: var(--navy); overflow: hidden; }
+    .craft-showcase::before { content: ""; position: absolute; inset: 0; opacity: .18; background: linear-gradient(90deg, rgba(0,31,59,.97), rgba(0,31,59,.42)), url("assets/hero-build.svg") center/cover; transform: scale(1.02); }
+    .craft-showcase .container { position: relative; z-index: 1; }
+    .craft-intro { display: flex; align-items: end; justify-content: space-between; gap: 70px; }
+    .craft-intro .section-lede { color: rgba(255,255,255,.68); }
+    .craft-cards { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 48px; }
+    .craft-card { position: relative; min-height: 278px; display: flex; flex-direction: column; justify-content: space-between; padding: 22px; color: var(--ink); border-top: 5px solid var(--gold); background: rgba(255,255,255,.97); box-shadow: 0 22px 42px rgba(0,0,0,.16); transition: transform .45s var(--soft-ease), box-shadow .45s var(--soft-ease), background .35s var(--ease); }
+    .craft-card:hover { transform: translateY(-10px); background: #fff; box-shadow: 0 30px 58px rgba(0,0,0,.24); }
+    .craft-card-icon { width: 48px; height: 48px; display: grid; place-items: center; color: var(--blue); border: 1px solid rgba(15,92,142,.24); border-radius: 50%; font: 600 22px/1 "Space Grotesk", sans-serif; }
+    .craft-card small { color: var(--blue); font: 700 10px/1 "DM Sans", sans-serif; letter-spacing: .15em; text-transform: uppercase; }
+    .craft-card h3 { max-width: 200px; margin: 0; font: 600 21px/1.08 "Space Grotesk", sans-serif; letter-spacing: -.045em; }
+    .craft-card p { margin: 0; color: var(--ink-soft); font-size: 12px; line-height: 1.5; }
+
+    .home-realizations { color: #fff; background: var(--navy); overflow: hidden; }
+    .home-realizations::after { content: "BH"; position: absolute; right: -8vw; bottom: -7vw; color: rgba(255,255,255,.045); font: 700 40vw/.65 "Space Grotesk", sans-serif; letter-spacing: -.15em; pointer-events: none; }
+    .home-realizations .container { position: relative; z-index: 1; }
+    .home-realizations .section-title strong { color: var(--gold); }
+    .home-realizations .filter-btn { color: rgba(255,255,255,.7); border-color: rgba(255,255,255,.24); }
+    .home-realizations .filter-btn:hover, .home-realizations .filter-btn.active { color: var(--ink); border-color: var(--gold); background: var(--gold); }
+    .home-realizations .btn-ghost { color: #fff; border-color: rgba(255,255,255,.26); }
+    .home-realizations .btn-ghost:hover { color: var(--ink); border-color: var(--gold); background: var(--gold); }
+    .home-realizations .project-card { box-shadow: 0 18px 38px rgba(0,0,0,.18); }
+    .home-realizations .project-card.large { min-height: 590px; }
+    .home-realizations .project-card:not(.large) { min-height: 430px; }
+
+    .home-recruitment { background: var(--panel); }
+    .home-recruitment-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 100px; align-items: center; }
+    .home-recruitment-art { position: relative; min-height: 390px; overflow: hidden; isolation: isolate; background: linear-gradient(135deg, rgba(0,31,59,.22), rgba(0,31,59,.9)), url("assets/hero-conceive.svg") center/cover; }
+    .home-recruitment-art::before { content: ""; position: absolute; inset: 10% 12%; border: 1px solid rgba(255,255,255,.35); transform: skewY(-8deg); }
+    .home-recruitment-art::after { content: "BELLE HOUSE · L'ÉQUIPE"; position: absolute; right: 20px; bottom: 20px; color: var(--gold); font: 700 10px/1 "DM Sans", sans-serif; letter-spacing: .2em; }
+    .home-recruitment-art span { position: absolute; z-index: 1; top: 34px; left: 34px; color: #fff; font: 600 clamp(32px, 4vw, 62px)/.93 "Space Grotesk", sans-serif; letter-spacing: -.07em; }
+    .home-recruitment .btn { margin-top: 28px; }
+
+    .home-locations { color: #fff; background: var(--navy); overflow: hidden; }
+    .home-locations-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 82px; align-items: stretch; }
+    .home-locations .section-lede { color: rgba(255,255,255,.68); }
+    .home-locations .section-title strong { color: var(--gold); }
+    .location-contact { display: grid; gap: 0; margin-top: 34px; border-top: 1px solid rgba(255,255,255,.25); }
+    .location-contact a { display: flex; align-items: center; justify-content: space-between; min-height: 62px; color: #fff; border-bottom: 1px solid rgba(255,255,255,.25); font-size: 14px; font-weight: 700; }
+    .location-contact a span { color: var(--gold); font-size: 20px; }
+    .location-map { position: relative; min-height: 430px; overflow: hidden; background: radial-gradient(circle at 52% 48%, rgba(23,95,148,.62), transparent 18%), linear-gradient(145deg, #063e67, #001629 78%); }
+    .location-map::before { content: ""; position: absolute; inset: -15%; opacity: .55; background: repeating-linear-gradient(0deg, transparent 0 80px, rgba(143,196,220,.16) 81px 82px), repeating-linear-gradient(90deg, transparent 0 120px, rgba(143,196,220,.12) 121px 122px); transform: rotate(-12deg) scale(1.25); }
+    .location-map::after { content: "NIAMEY"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: rgba(255,255,255,.8); font: 700 12px/1 "DM Sans", sans-serif; letter-spacing: .32em; }
+    .location-grid-label { position: absolute; z-index: 2; top: 24px; left: 24px; color: var(--gold); font: 700 10px/1 "DM Sans", sans-serif; letter-spacing: .2em; }
+    .location-map-caption { position: absolute; z-index: 2; right: 24px; bottom: 24px; color: rgba(255,255,255,.72); font-size: 12px; }
+    .location-pin { position: absolute; z-index: 2; width: 17px; height: 17px; border: 4px solid rgba(255,255,255,.85); border-radius: 50% 50% 50% 0; background: var(--gold); box-shadow: 0 0 0 8px rgba(238,11,69,.15); transform: rotate(-45deg); }
+    .pin-one { top: 43%; left: 52%; }
+    .pin-two { top: 29%; left: 35%; transform: rotate(-45deg) scale(.75); }
+    .pin-three { top: 64%; left: 66%; transform: rotate(-45deg) scale(.68); }
+    .pin-four { top: 70%; left: 40%; transform: rotate(-45deg) scale(.58); }
+
+    .certifications { background: var(--canvas); overflow: hidden; }
+    .certifications::after { content: "✦"; position: absolute; right: 8%; bottom: -5%; color: rgba(15,92,142,.05); font: 700 260px/1 "Space Grotesk", sans-serif; }
+    .cert-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 96px; align-items: start; }
+    .cert-layout > * { position: relative; z-index: 1; }
+    .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .cert-card { min-height: 160px; padding: 22px; border: 1px solid var(--line); background: #fff; box-shadow: 0 16px 36px rgba(15,41,64,.08); transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
+    .cert-card:hover { transform: translateY(-6px); box-shadow: 0 24px 42px rgba(15,41,64,.14); }
+    .cert-card::before { content: ""; display: block; width: 44px; height: 4px; margin-bottom: 34px; background: var(--gold); }
+    .cert-card h3 { margin-bottom: 8px; color: var(--ink); font: 600 18px/1.05 "Space Grotesk", sans-serif; letter-spacing: -.035em; }
+    .cert-card p { margin: 0; color: var(--ink-soft); font-size: 11px; line-height: 1.5; }
+
     .footer { padding: 36px 0 104px; color: rgba(255,255,255,.66); background: var(--navy); }
     .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding-bottom: 32px; border-bottom: 1px solid var(--line-light); }
     .footer .brand { color: #fff; }
@@ -319,6 +383,9 @@
       .service-card:nth-child(4) { border-top: 1px solid var(--line-light); }
       .project-grid { grid-template-columns: 1fr 1fr; }
       .project-card.large { grid-row: span 2; }
+      .craft-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .home-recruitment-grid, .home-locations-grid, .cert-layout { gap: 60px; }
+      .cert-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 760px) {
@@ -335,7 +402,7 @@
       .brand-mark { width: 40px; height: 48px; }
       .brand-name { font-size: 16px; }
       .brand-sub { font-size: 7px; }
-      .hero { height: 280vh; }
+      .hero { height: 240vh; }
       .hero-stage { min-height: 720px; }
       .hero-content { width: calc(100% - 32px); min-height: 720px; padding-top: 132px; display: block; }
       .hero h1 { max-width: 620px; font-size: clamp(48px, 15vw, 72px); }
@@ -356,6 +423,15 @@
       .container { width: calc(100% - 32px); }
       .section-title { font-size: clamp(38px, 12vw, 58px); }
       .intro-grid, .journey-grid, .values-grid, .contact-grid { grid-template-columns: 1fr; gap: 44px; }
+      .craft-intro { display: block; }
+      .craft-intro .section-lede { margin-top: 24px; }
+      .craft-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 34px; }
+      .craft-card { min-height: 224px; padding: 18px; }
+      .craft-card h3 { font-size: 18px; }
+      .home-recruitment-grid, .home-locations-grid, .cert-layout { grid-template-columns: 1fr; gap: 44px; }
+      .home-recruitment-art { min-height: 300px; }
+      .location-map { min-height: 310px; }
+      .cert-grid { grid-template-columns: repeat(2, 1fr); }
       .intro-callout { padding-left: 0; }
       .intro-callout p { font-size: 21px; }
       .stats { padding: 0; }
@@ -395,6 +471,13 @@
       .mobile-cta a, .mobile-cta button { display: grid; place-items: center; align-content: center; gap: 3px; color: #fff; background: transparent; font-size: 10px; font-weight: 700; }
       .mobile-cta a:first-child { color: var(--ink); background: var(--gold); }
       .mobile-cta svg { width: 16px; height: 16px; }
+    }
+
+    @media (max-width: 520px) {
+      .craft-cards, .cert-grid { grid-template-columns: 1fr; }
+      .craft-card { min-height: 188px; }
+      .home-recruitment-art span { top: 24px; left: 24px; font-size: 42px; }
+      .cert-card { min-height: 132px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -437,15 +520,14 @@
         <div class="hero-axis" aria-hidden="true"></div>
         <div class="hero-scene-media" aria-label="Étapes d'un projet Belle House">
           <figure class="hero-scene active"><img src="assets/hero-listen.svg" width="1600" height="1000" fetchpriority="high" alt="Plan et repères pour écouter et cadrer un projet de construction"><figcaption>01 · Écouter le besoin</figcaption></figure>
-          <figure class="hero-scene"><img src="assets/hero-conceive.svg" width="1600" height="1000" loading="lazy" alt="Tracés architecturaux pour concevoir une solution BTP"><figcaption>02 · Concevoir avec précision</figcaption></figure>
-          <figure class="hero-scene"><img src="assets/hero-build.svg" width="1600" height="1000" loading="lazy" alt="Bâtiment en construction suivi par une grue"><figcaption>03 · Construire avec méthode</figcaption></figure>
-          <figure class="hero-scene"><img src="assets/hero-deliver.svg" width="1600" height="1000" loading="lazy" alt="Bâtiment achevé prêt à être livré"><figcaption>04 · Livrer un lieu durable</figcaption></figure>
+          <figure class="hero-scene"><img src="assets/hero-build.svg" width="1600" height="1000" loading="lazy" alt="Bâtiment en construction suivi par une grue"><figcaption>02 · Construire avec méthode</figcaption></figure>
+          <figure class="hero-scene"><img src="assets/hero-conceive.svg" width="1600" height="1000" loading="lazy" alt="Plans et volumes préparés pour concevoir un projet"><figcaption>03 · Donner forme au projet</figcaption></figure>
         </div>
         <div class="hero-content">
           <div class="hero-copy reveal in" id="hero-copy">
-            <span class="eyebrow" id="hero-eyebrow">Écouter le besoin</span>
-            <h1 id="hero-title"><span>Un projet commence</span><span>par une <em>bonne écoute.</em></span></h1>
-            <p class="hero-lede" id="hero-lede">Avant les plans et les premiers travaux, nous prenons le temps de comprendre votre terrain, vos usages et vos priorités.</p>
+            <span class="eyebrow" id="hero-eyebrow">Donner forme à vos idées</span>
+            <h1 id="hero-title"><span>Une vision claire.</span><span>Des choix <em>justes.</em></span></h1>
+            <p class="hero-lede" id="hero-lede">Nous transformons votre intention en une direction concrète, adaptée à votre terrain, vos usages et vos priorités.</p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="realisations.html">Voir nos projets <span class="arrow">↗</span></a>
               <a class="btn btn-outline" href="contact.html">Nous contacter <span class="arrow">↗</span></a>
@@ -466,7 +548,7 @@
             <li><span>04</span> Livrer</li>
           </ol>
         </div>
-        <div class="hero-meta"><span>NIAMEY · NIGER</span><span class="scroll-cue">Défiler pour découvrir <i></i></span><span id="hero-step">01 / 04</span></div>
+        <div class="hero-meta"><span>NIAMEY · NIGER</span><span class="scroll-cue">Défiler pour découvrir <i></i></span><span id="hero-step">01 / 03</span></div>
       </div>
     </section>
 
@@ -507,10 +589,26 @@
       </div>
     </section>
 
-    <section class="section projects" id="projects" aria-labelledby="projects-title">
+    <section class="section craft-showcase" id="savoir-faire" aria-labelledby="craft-title">
+      <div class="container">
+        <div class="craft-intro reveal">
+          <div><span class="section-kicker light">Notre savoir-faire</span><h2 class="section-title" id="craft-title">Des compétences qui donnent <strong>forme aux idées.</strong></h2></div>
+          <p class="section-lede">De la première esquisse à la livraison, Belle House réunit les bonnes expertises autour d'un même cap.</p>
+        </div>
+        <div class="craft-cards">
+          <article class="craft-card reveal"><div><span class="craft-card-icon">✦</span><small>01 · Vision</small></div><h3>Des expertises construction, métal et béton</h3><p>Des choix cohérents pour un projet solide et lisible.</p></article>
+          <article class="craft-card reveal delay-1"><div><span class="craft-card-icon">⌂</span><small>02 · Proximité</small></div><h3>Un interlocuteur unique dédié à votre projet</h3><p>Une équipe qui reste joignable à chaque étape.</p></article>
+          <article class="craft-card reveal delay-2"><div><span class="craft-card-icon">◎</span><small>03 · Équipe</small></div><h3>Des équipes dédiées à chaque chantier</h3><p>Des compétences réunies au bon moment.</p></article>
+          <article class="craft-card reveal delay-3"><div><span class="craft-card-icon">↗</span><small>04 · Méthode</small></div><h3>Concevoir, coordonner et construire</h3><p>Un suivi concret pour garder le cap.</p></article>
+          <article class="craft-card reveal"><div><span class="craft-card-icon">◒</span><small>05 · Durabilité</small></div><h3>Des solutions utiles pour bâtir plus durable</h3><p>Des matériaux et usages pensés pour durer.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects home-realizations" id="projects" aria-labelledby="projects-title">
       <div class="container">
         <div class="projects-head reveal">
-          <div><span class="section-kicker">Nos réalisations</span><h2 class="section-title" id="projects-title">Des lieux qui <strong>restent.</strong></h2></div>
+          <div><span class="section-kicker light">Références</span><h2 class="section-title" id="projects-title">Découvrez <strong>nos réalisations.</strong></h2></div>
           <a class="btn btn-ghost" href="contact.html">Présenter un projet <span class="arrow">↗</span></a>
         </div>
         <div class="project-filter reveal delay-1" role="group" aria-label="Filtrer les réalisations">
@@ -556,6 +654,44 @@
           <article class="value reveal delay-1"><span class="value-mark">⌁</span><h3>Fiabilité</h3><p>Un cadre clair, des engagements suivis et un interlocuteur qui répond.</p></article>
           <article class="value reveal delay-2"><span class="value-mark">◈</span><h3>Expérience</h3><p>Vingt ans de pratique pour mieux anticiper les réalités d'un projet.</p></article>
           <article class="value reveal delay-3"><span class="value-mark">↗</span><h3>Innovation</h3><p>Des idées utiles pour construire juste, durablement et avec bon sens.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-recruitment" id="recrutement-home" aria-labelledby="home-recruitment-title">
+      <div class="container home-recruitment-grid">
+        <div class="reveal">
+          <span class="section-kicker">Recrutement</span>
+          <h2 class="section-title" id="home-recruitment-title">Construire avec nous.<br><strong>Avec sens.</strong></h2>
+          <p class="section-lede">Rejoindre Belle House, c'est contribuer à des projets utiles, apprendre sur le terrain et faire grandir une culture du travail bien fait au Niger.</p>
+          <a class="btn btn-primary" href="recrutement.html">Découvrir nos opportunités <span class="arrow">↗</span></a>
+        </div>
+        <div class="home-recruitment-art reveal delay-1" role="img" aria-label="Équipe Belle House en préparation de projet"><span>Une aventure<br><strong>humaine.</strong></span></div>
+      </div>
+    </section>
+
+    <section class="section home-locations" id="implantations" aria-labelledby="locations-title">
+      <div class="container home-locations-grid">
+        <div class="reveal">
+          <span class="section-kicker light">Nos implantations</span>
+          <h2 class="section-title" id="locations-title">À vos <strong>côtés.</strong></h2>
+          <p class="section-lede">Nous développons une présence de proximité pour apporter de la réactivité à chaque projet, selon les réalités de Niamey et des territoires du Niger.</p>
+          <div class="location-contact"><a href="tel:+22792005454"><span>☎</span> +227 92 00 54 54 <b>→</b></a><a href="https://wa.me/22792005454?text=Bonjour%20Belle%20House%2C%20je%20souhaite%20parler%20de%20mon%20projet." target="_blank" rel="noopener"><span>◌</span> Échanger sur WhatsApp <b>→</b></a></div>
+        </div>
+        <div class="location-map reveal delay-1" role="img" aria-label="Carte stylisée des implantations Belle House au Niger"><span class="location-grid-label">NIAMEY · NIGER</span><i class="location-pin pin-one" aria-hidden="true"></i><i class="location-pin pin-two" aria-hidden="true"></i><i class="location-pin pin-three" aria-hidden="true"></i><i class="location-pin pin-four" aria-hidden="true"></i><span class="location-map-caption">Proximité · Réactivité · Présence</span></div>
+      </div>
+    </section>
+
+    <section class="section certifications" id="qualite" aria-labelledby="cert-title">
+      <div class="container cert-layout">
+        <div class="reveal"><span class="section-kicker">Qualité & confiance</span><h2 class="section-title" id="cert-title">Des repères solides pour <strong>avancer sereinement.</strong></h2><p class="section-lede">Notre exigence se traduit par des méthodes simples : préparer, contrôler, documenter et rester disponible jusqu'à la livraison.</p></div>
+        <div class="cert-grid">
+          <article class="cert-card reveal"><h3>Préparation précise</h3><p>Un cadre clair avant le premier coup de pioche.</p></article>
+          <article class="cert-card reveal delay-1"><h3>Suivi de chantier</h3><p>Des points d'avancement compréhensibles.</p></article>
+          <article class="cert-card reveal delay-2"><h3>Sécurité</h3><p>Des pratiques responsables sur le terrain.</p></article>
+          <article class="cert-card reveal delay-1"><h3>Matériaux fiables</h3><p>Des solutions choisies pour leur usage et leur durée.</p></article>
+          <article class="cert-card reveal delay-2"><h3>Équipe formée</h3><p>Des savoir-faire mobilisés avec méthode.</p></article>
+          <article class="cert-card reveal delay-3"><h3>Présence locale</h3><p>Une relation de proximité, à Niamey et au-delà.</p></article>
         </div>
       </div>
     </section>
@@ -648,11 +784,9 @@
       const heroStep = document.getElementById('hero-step');
       const heroStory = [...document.querySelectorAll('.hero-story li')];
       const heroContent = [
-        { eyebrow: 'Écouter le besoin', title: '<span>Un projet commence</span><span>par une <em>bonne écoute.</em></span>', lede: 'Avant les plans et les premiers travaux, nous prenons le temps de comprendre votre terrain, vos usages et vos priorités.' },
-        { eyebrow: 'Concevoir avec précision', title: '<span>Dessiner une <em>direction</em></span><span>claire.</span>', lede: 'Plans, choix techniques et budget avancent ensemble pour donner à votre projet une direction lisible.' },
-        { eyebrow: 'Construire avec méthode', title: '<span>Construire avec</span><span><em>méthode.</em></span>', lede: 'Sur le terrain, nous coordonnons les métiers, suivons les étapes et gardons les décisions importantes visibles.' },
-        { eyebrow: 'Livrer un lieu durable', title: '<span>Livrer un lieu</span><span>qui vous <em>ressemble.</em></span>', lede: 'Chaque finition compte. Nous avançons jusqu’à la remise des clés avec la même exigence qu’au premier échange.' },
-        { eyebrow: 'Bâtisseur de confiance', title: '<span>Construire <em>mieux.</em></span><span>Vivre <em>pleinement.</em></span>', lede: 'De la conception à la livraison, Belle House vous accompagne avec rigueur, clarté et passion pour donner une forme durable à vos projets au Niger.' }
+        { eyebrow: 'Donner forme à vos idées', title: '<span>Une vision claire.</span><span>Des choix <em>justes.</em></span>', lede: 'Nous transformons votre intention en une direction concrète, adaptée à votre terrain, vos usages et vos priorités.' },
+        { eyebrow: 'Construire avec méthode', title: '<span>Du plan au</span><span>chantier <em>maîtrisé.</em></span>', lede: 'Chaque métier avance au bon moment, avec une équipe présente pour garder le cap et la qualité visible.' },
+        { eyebrow: 'Écouter le besoin', title: '<span>Un projet commence</span><span>par une <em>bonne écoute.</em></span>', lede: 'Avant les plans et les premiers travaux, nous prenons le temps de comprendre votre terrain, vos usages et vos priorités.' }
       ];
       let currentHeroContent = -1;
       let heroSwitchTimer = 0;
@@ -686,16 +820,16 @@
           hero.style.setProperty('--hero-orbit-x', (progress * -46).toFixed(2));
           hero.style.setProperty('--hero-orbit-y', (progress * 34).toFixed(2));
           hero.style.setProperty('--hero-axis-y', (progress * 86).toFixed(2));
-          const finality = Math.min(1, Math.max(0, (progress - .78) / .22));
-          const activeScene = Math.min(heroScenes.length - 1, Math.floor(Math.min(.779, progress) / .78 * heroScenes.length));
+          const finality = Math.min(1, Math.max(0, (progress - .70) / .30));
+          const activeScene = Math.min(heroScenes.length - 1, Math.floor(Math.min(.699, progress) / .70 * heroScenes.length));
           const finalScene = finality > 0;
           hero.style.setProperty('--hero-final', finality.toFixed(3));
           hero.classList.toggle('scene-final', finalScene);
           heroScenes.forEach((scene, index) => scene.classList.toggle('active', index === activeScene));
-          showHeroContent(finalScene ? 4 : activeScene);
+          showHeroContent(finalScene ? 2 : activeScene);
           const activeStory = Math.min(heroStory.length - 1, Math.floor(progress * heroStory.length));
           heroStory.forEach((item, index) => item.classList.toggle('active', index === activeStory));
-          if (heroStep) heroStep.textContent = `0${activeStory + 1} / 04`;
+          if (heroStep) heroStep.textContent = `0${finalScene ? 3 : activeScene + 1} / 03`;
         });
       };
       addEventListener('scroll', onScroll, { passive: true });
@@ -768,8 +902,23 @@
         });
       }));
 
-      const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in'); revealObserver.unobserve(entry.target); } }), { threshold: .14 });
-      document.querySelectorAll('.reveal:not(.in)').forEach(element => revealObserver.observe(element));
+      const revealElements = [...document.querySelectorAll('.reveal:not(.in)')];
+      const revealVisibleNow = () => revealElements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight * .94 && rect.bottom > 0) element.classList.add('in');
+      });
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            revealObserver.unobserve(entry.target);
+          }
+        }), { threshold: .14 });
+        revealElements.forEach(element => revealObserver.observe(element));
+        revealVisibleNow();
+      } else {
+        revealElements.forEach(element => element.classList.add('in'));
+      }
 
       const holdButton = document.getElementById('hold-button');
       const holdFill = document.getElementById('hold-fill');
