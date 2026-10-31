@@ -6,15 +6,28 @@
   <title>Belle House Niger | L'art de bâtir autrement</title>
   <meta name="description" content="Belle House Niger vous accompagne de la conception à la livraison de vos projets de construction, de ferraillage et d'ingénierie BTP à Niamey et au Niger.">
   <meta name="theme-color" content="#001f3b">
-  <!-- DEPLOY STEP: replace the placeholder absolute URL in og:url and og:image before publishing. -->
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.bellehouseniger.com/">
   <meta property="og:url" content="https://www.bellehouseniger.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_NE">
+  <meta property="og:site_name" content="Belle House Niger">
   <meta property="og:image" content="https://www.bellehouseniger.com/assets/belle-house-logo.png">
+  <meta property="og:image:alt" content="Bâtiment durable conçu par Belle House Niger">
   <meta property="og:title" content="Belle House Niger | L'art de bâtir autrement">
   <meta property="og:description" content="Construction, ferraillage et ingénierie BTP, avec un seul interlocuteur pour avancer sereinement.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Belle House Niger | L'art de bâtir autrement">
+  <meta name="twitter:description" content="Construction, ferraillage et ingénierie BTP à Niamey et au Niger.">
+  <meta name="twitter:image" content="https://www.bellehouseniger.com/assets/belle-house-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/nav.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23175f94'/%3E%3Cpath d='M19 48 50 17l31 31v36H63V60H37v24H19Z' fill='none' stroke='%23fff' stroke-width='7'/%3E%3Cpath d='M32 67h36M50 44v16' stroke='%23f0c77b' stroke-width='5'/%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.bellehouseniger.com/#organization","name":"Belle House Niger","url":"https://www.bellehouseniger.com/","logo":"https://www.bellehouseniger.com/assets/belle-house-logo.png","email":"contact@bellehouseniger.com","telephone":"+22792005454"},{"@type":"LocalBusiness","@id":"https://www.bellehouseniger.com/#localbusiness","name":"Belle House Niger","url":"https://www.bellehouseniger.com/","image":"https://www.bellehouseniger.com/assets/hero-deliver.svg","telephone":"+22792005454","email":"contact@bellehouseniger.com","address":{"@type":"PostalAddress","streetAddress":"Quartier Francophonie","addressLocality":"Niamey","addressCountry":"NE"},"areaServed":"Niger","priceRange":"$$"},{"@type":"WebSite","@id":"https://www.bellehouseniger.com/#website","url":"https://www.bellehouseniger.com/","name":"Belle House Niger","publisher":{"@id":"https://www.bellehouseniger.com/#organization"},"inLanguage":"fr-NE"},{"@type":"WebPage","@id":"https://www.bellehouseniger.com/#webpage","url":"https://www.bellehouseniger.com/","name":"Belle House Niger | L'art de bâtir autrement","isPartOf":{"@id":"https://www.bellehouseniger.com/#website"},"about":{"@id":"https://www.bellehouseniger.com/#localbusiness"},"inLanguage":"fr-NE"}]}
+  </script>
   <style>
     :root {
       --canvas: #f7f8fa;
@@ -72,7 +85,7 @@
     .menu-toggle.open::after { transform: translateY(-7px) rotate(-45deg); }
     .menu-toggle.open span { opacity: 0; }
 
-    .hero { position: relative; height: 270vh; overflow: visible; color: #fff; background: var(--navy); }
+    .hero { position: relative; height: 420vh; overflow: visible; color: #fff; background: var(--navy); }
     .hero-stage { position: sticky; top: 0; height: 100vh; min-height: 720px; overflow: hidden; color: #fff; background: var(--navy); }
     .hero-backdrop { position: absolute; inset: -3%; background: linear-gradient(110deg, rgba(0,20,40,.98) 0%, rgba(4,51,80,.9) 45%, rgba(15,92,142,.7) 100%), radial-gradient(circle at 80% 22%, rgba(238,11,69,.24), transparent 28%), linear-gradient(140deg, #001b31, #2e7596); transform: scale(calc(1 + var(--hero-scale, 0))); transition: transform .1s linear; }
     .hero-backdrop::before { content: ""; position: absolute; inset: -10%; opacity: .35; background: linear-gradient(125deg, transparent 0 34%, rgba(255,255,255,.1) 34.1% 34.35%, transparent 34.45% 58%, rgba(238,11,69,.35) 58.15% 58.35%, transparent 58.45% 100%), repeating-linear-gradient(90deg, transparent 0 98px, rgba(255,255,255,.07) 99px, transparent 100px), repeating-linear-gradient(0deg, transparent 0 108px, rgba(255,255,255,.06) 109px, transparent 110px); transform: perspective(700px) rotateX(54deg) translateY(15%) scale(1.4); transform-origin: center bottom; }
@@ -81,6 +94,12 @@
     .hero-orbit::before, .hero-orbit::after { content: ""; position: absolute; inset: 11%; border: 1px solid rgba(238,11,69,.35); border-radius: inherit; }
     .hero-orbit::after { inset: 27%; border-color: rgba(143,196,220,.32); }
     .hero-axis { position: absolute; right: 24%; top: 14%; bottom: 0; width: 1px; background: linear-gradient(transparent, rgba(255,255,255,.34), transparent); transform: translateY(calc(var(--hero-axis-y, 0) * 1px)) rotate(28deg); transform-origin: top; }
+    .hero-scene-media { position: absolute; z-index: 1; top: 15%; right: 4%; width: min(650px, 47vw); height: 68vh; min-height: 470px; overflow: hidden; opacity: calc(1 - var(--hero-final, 0)); transform: translate3d(calc(var(--hero-orbit-x, 0) * -.35px), calc(var(--hero-orbit-y, 0) * -.25px), 0); transition: opacity .55s var(--soft-ease); }
+    .hero-scene { position: absolute; inset: 0; margin: 0; opacity: 0; transform: translate3d(48px, 0, 0) scale(.96); transition: opacity .7s var(--soft-ease), transform .9s var(--soft-ease); }
+    .hero-scene.active { opacity: .78; transform: none; }
+    .hero-scene::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,31,59,.78), transparent 38%), linear-gradient(0deg, rgba(0,17,33,.78), transparent 42%); }
+    .hero-scene img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-scene figcaption { position: absolute; z-index: 1; right: 26px; bottom: 24px; left: 26px; color: rgba(255,255,255,.82); font: 600 11px/1.5 "DM Sans", sans-serif; letter-spacing: .13em; text-transform: uppercase; }
     .hero-content { position: relative; z-index: 2; width: min(1440px, calc(100% - 80px)); height: 100%; margin: 0 auto; padding-top: 174px; display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 80px; align-items: center; transform: translate3d(0, calc(var(--hero-shift, 0) * 1px), 0); opacity: var(--hero-opacity, 1); transition: opacity .16s linear; }
     .eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; color: var(--gold); font: 700 11px/1 "DM Sans", sans-serif; letter-spacing: .22em; text-transform: uppercase; }
     .eyebrow::before { content: ""; width: 34px; height: 1px; background: currentColor; }
@@ -92,7 +111,7 @@
     .hero-ready .hero-copy .eyebrow { animation: heroTextIn .7s var(--soft-ease) both; }
     .hero-ready .hero-lede { opacity: 0; animation: heroTextIn .8s var(--soft-ease) .42s both; }
     .hero-ready .hero-actions { opacity: 0; animation: heroTextIn .8s var(--soft-ease) .54s both; }
-    .hero-ready .hero-side { opacity: 0; animation: heroTextIn .8s var(--soft-ease) .68s both; }
+    .hero-ready .hero-side { animation: none; }
     .hero h1 em { color: var(--gold); font-style: normal; }
     .hero-lede { max-width: 590px; margin-bottom: 32px; color: rgba(255,255,255,.85); font-size: 16px; line-height: 1.7; text-wrap: balance; }
     .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
@@ -103,7 +122,8 @@
     .btn-ghost:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
     .arrow { font-size: 19px; line-height: 0; transition: transform .28s var(--ease); }
     .btn:hover .arrow, a:hover .arrow { transform: translateX(4px); }
-    .hero-side { align-self: end; padding-bottom: 94px; }
+    .hero-side { align-self: end; padding-bottom: 94px; opacity: 0; transform: translateY(28px); pointer-events: none; transition: opacity .6s var(--soft-ease), transform .7s var(--soft-ease); }
+    .hero.scene-final .hero-side { opacity: 1; transform: none; pointer-events: auto; }
     .hero-side-label { margin-bottom: 14px; color: rgba(255,255,255,.63); font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
     .hero-side-card { padding: 24px; border: 1px solid rgba(255,255,255,.22); background: rgba(8,23,37,.45); backdrop-filter: blur(12px); }
     .hero-side-card + .hero-side-card { border-top: 0; }
@@ -122,6 +142,9 @@
     .hero-story li.active { color: #fff; transform: translateX(8px); }
     .hero-story li.active::before { transform: scaleY(1); }
     .hero-story li span { color: var(--gold); font: 600 11px/1 "Space Grotesk", sans-serif; }
+    .hero-copy.is-switching { opacity: 0; transform: translateY(18px); }
+    .hero-copy { transition: opacity .35s var(--soft-ease), transform .5s var(--soft-ease); }
+    .hero.scene-final .hero-copy { max-width: 780px; }
 
     .section { position: relative; padding: 132px 0; }
     .container { width: min(1240px, calc(100% - 80px)); margin: 0 auto; }
@@ -206,6 +229,17 @@
     .value h3 { margin-bottom: 12px; font: 500 25px/1 "Space Grotesk", sans-serif; letter-spacing: -.04em; }
     .value p { margin-bottom: 0; color: rgba(255,255,255,.62); font-size: 13px; line-height: 1.65; }
     .value-mark { width: 34px; height: 34px; display: grid; place-items: center; margin-bottom: 24px; color: var(--gold); border: 1px solid rgba(255,255,255,.25); border-radius: 50%; }
+
+    .editorial-links { background: var(--panel); }
+    .editorial-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .editorial-card { position: relative; min-height: 310px; display: flex; flex-direction: column; justify-content: end; overflow: hidden; padding: 30px; color: #fff; background: var(--blue); isolation: isolate; }
+    .editorial-card::before { content: ""; position: absolute; z-index: -1; inset: 0; opacity: .76; background: linear-gradient(135deg, rgba(0,31,59,.28), rgba(0,31,59,.95)), url("assets/hero-build.svg") center/cover; transition: transform .8s var(--soft-ease); }
+    .editorial-card::after { content: ""; position: absolute; z-index: -1; right: -70px; bottom: -110px; width: 250px; height: 250px; border: 1px solid rgba(255,255,255,.34); border-radius: 50%; box-shadow: 0 0 0 45px rgba(238,11,69,.14), 0 0 0 90px rgba(255,255,255,.06); }
+    .editorial-card:hover::before { transform: scale(1.06); }
+    .editorial-card.recruit::before { background-image: linear-gradient(135deg, rgba(15,92,142,.22), rgba(0,31,59,.95)), url("assets/hero-conceive.svg"); }
+    .editorial-card small { display: block; margin-bottom: 12px; color: var(--gold); font: 700 10px/1 "DM Sans", sans-serif; letter-spacing: .2em; text-transform: uppercase; }
+    .editorial-card h3 { max-width: 480px; margin: 0 0 12px; font: 500 clamp(30px, 4vw, 52px)/.98 "Space Grotesk", sans-serif; letter-spacing: -.05em; }
+    .editorial-card p { max-width: 480px; margin: 0; color: rgba(255,255,255,.72); font-size: 14px; line-height: 1.6; }
 
     .contact { background: var(--panel); }
     .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 110px; align-items: start; }
@@ -301,7 +335,7 @@
       .brand-mark { width: 40px; height: 48px; }
       .brand-name { font-size: 16px; }
       .brand-sub { font-size: 7px; }
-      .hero { height: 210vh; }
+      .hero { height: 280vh; }
       .hero-stage { min-height: 720px; }
       .hero-content { width: calc(100% - 32px); min-height: 720px; padding-top: 132px; display: block; }
       .hero h1 { max-width: 620px; font-size: clamp(48px, 15vw, 72px); }
@@ -315,6 +349,9 @@
       .hero-orbit { width: 100vw; height: 100vw; right: -34vw; top: 14%; opacity: .6; }
       .hero-axis { right: 16%; }
       .hero-story { display: none; }
+      .hero-scene-media { top: 34%; right: -19%; width: 100vw; height: 52vh; min-height: 360px; opacity: calc(.55 - var(--hero-final, 0) * .55); }
+      .hero-scene::after { background: linear-gradient(90deg, rgba(0,31,59,.84), rgba(0,31,59,.3)), linear-gradient(0deg, rgba(0,17,33,.84), transparent 50%); }
+      .hero-scene figcaption { right: 18px; bottom: 18px; left: 18px; font-size: 9px; }
       .section { padding: 88px 0; }
       .container { width: calc(100% - 32px); }
       .section-title { font-size: clamp(38px, 12vw, 58px); }
@@ -342,6 +379,8 @@
       .step h3 { font-size: 22px; }
       .value-list { grid-template-columns: 1fr; }
       .value, .value:nth-child(even) { min-height: auto; padding: 24px 0; border-left: 0; }
+      .editorial-grid { grid-template-columns: 1fr; }
+      .editorial-card { min-height: 260px; padding: 24px; }
       .contact-details { margin-top: 30px; }
       .contact-form { padding: 22px 18px; }
       .form-grid { grid-template-columns: 1fr; }
@@ -363,6 +402,7 @@
       .hero { height: 100vh; }
       *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; transition-delay: 0s !important; }
       .hero h1 span { opacity: 1; transform: none; }
+      .hero-scene-media { opacity: 0; }
       .reveal, .reveal.in { opacity: 1; transform: none; }
     }
   </style>
@@ -395,11 +435,17 @@
         <div class="hero-backdrop" aria-hidden="true"></div>
         <div class="hero-orbit" aria-hidden="true"></div>
         <div class="hero-axis" aria-hidden="true"></div>
+        <div class="hero-scene-media" aria-label="Étapes d'un projet Belle House">
+          <figure class="hero-scene active"><img src="assets/hero-listen.svg" width="1600" height="1000" fetchpriority="high" alt="Plan et repères pour écouter et cadrer un projet de construction"><figcaption>01 · Écouter le besoin</figcaption></figure>
+          <figure class="hero-scene"><img src="assets/hero-conceive.svg" width="1600" height="1000" loading="lazy" alt="Tracés architecturaux pour concevoir une solution BTP"><figcaption>02 · Concevoir avec précision</figcaption></figure>
+          <figure class="hero-scene"><img src="assets/hero-build.svg" width="1600" height="1000" loading="lazy" alt="Bâtiment en construction suivi par une grue"><figcaption>03 · Construire avec méthode</figcaption></figure>
+          <figure class="hero-scene"><img src="assets/hero-deliver.svg" width="1600" height="1000" loading="lazy" alt="Bâtiment achevé prêt à être livré"><figcaption>04 · Livrer un lieu durable</figcaption></figure>
+        </div>
         <div class="hero-content">
-          <div class="hero-copy reveal in">
-            <span class="eyebrow">Bâtisseur de confiance</span>
-            <h1 id="hero-title"><span>Construire <em>mieux.</em></span><span>Vivre <em>pleinement.</em></span></h1>
-            <p class="hero-lede">De la conception à la livraison, Belle House vous accompagne avec rigueur, clarté et passion pour donner une forme durable à vos projets au Niger.</p>
+          <div class="hero-copy reveal in" id="hero-copy">
+            <span class="eyebrow" id="hero-eyebrow">Écouter le besoin</span>
+            <h1 id="hero-title"><span>Un projet commence</span><span>par une <em>bonne écoute.</em></span></h1>
+            <p class="hero-lede" id="hero-lede">Avant les plans et les premiers travaux, nous prenons le temps de comprendre votre terrain, vos usages et vos priorités.</p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="realisations.html">Voir nos projets <span class="arrow">↗</span></a>
               <a class="btn btn-outline" href="contact.html">Nous contacter <span class="arrow">↗</span></a>
@@ -474,9 +520,9 @@
           <button class="filter-btn" type="button" data-filter="btp">BTP</button>
         </div>
         <div class="project-grid" id="project-grid">
-          <article class="project-card large reveal" data-category="construction"><div class="project-art" aria-hidden="true"></div><div class="project-content"><span class="project-location">Niamey · Niger</span><h3>Maison Koubia</h3><div class="project-tags"><span class="project-tag">Construction</span><span class="project-tag">Sur mesure</span></div></div></article>
-          <article class="project-card reveal delay-1" data-category="residence"><div class="project-art" aria-hidden="true"></div><div class="project-content"><span class="project-location">Niamey · Niger</span><h3>Résidence Azawad</h3><div class="project-tags"><span class="project-tag">Résidentiel</span></div></div></article>
-          <article class="project-card reveal delay-2" data-category="btp"><div class="project-art" aria-hidden="true"></div><div class="project-content"><span class="project-location">Niger · Afrique de l'Ouest</span><h3>Projet Horizon</h3><div class="project-tags"><span class="project-tag">Ingénierie BTP</span></div></div></article>
+          <a class="project-card large reveal" data-category="construction" href="realisation-maison-koubia.html"><div class="project-art" aria-hidden="true"></div><div class="project-content"><span class="project-location">Niamey · Niger</span><h3>Maison Koubia</h3><div class="project-tags"><span class="project-tag">Construction</span><span class="project-tag">Sur mesure</span></div></div></a>
+          <a class="project-card reveal delay-1" data-category="residence" href="realisations.html#residence-azawad"><div class="project-art" aria-hidden="true"></div><div class="project-content"><span class="project-location">Niamey · Niger</span><h3>Résidence Azawad</h3><div class="project-tags"><span class="project-tag">Résidentiel</span></div></div></a>
+          <a class="project-card reveal delay-2" data-category="btp" href="realisations.html#projet-horizon"><div class="project-art" aria-hidden="true"></div><div class="project-content"><span class="project-location">Niger · Afrique de l'Ouest</span><h3>Projet Horizon</h3><div class="project-tags"><span class="project-tag">Ingénierie BTP</span></div></div></a>
         </div>
       </div>
     </section>
@@ -514,6 +560,19 @@
       </div>
     </section>
 
+    <section class="section editorial-links" aria-labelledby="editorial-title">
+      <div class="container">
+        <div class="services-head reveal">
+          <div><span class="section-kicker">À la une</span><h2 class="section-title" id="editorial-title">Plus qu'un chantier, <strong>une aventure.</strong></h2></div>
+          <p class="section-lede">Découvrez les idées qui nourrissent nos projets et les talents qui font avancer Belle House au quotidien.</p>
+        </div>
+        <div class="editorial-grid">
+          <a class="editorial-card reveal" href="media.html"><small>Médias · Conseils & terrain</small><h3>Ce qui fait avancer les projets.</h3><p>Des repères simples pour mieux préparer, concevoir et suivre un projet au Niger.</p></a>
+          <a class="editorial-card recruit reveal delay-1" href="recrutement.html"><small>Recrutement · L'équipe</small><h3>Construire ensemble, avec sens.</h3><p>Rejoignez une équipe qui donne une place au savoir-faire, à la curiosité et au travail bien fait.</p></a>
+        </div>
+      </div>
+    </section>
+
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container contact-grid">
         <div class="reveal">
@@ -543,7 +602,7 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-main"><a class="brand" href="#top" aria-label="Retour en haut"><span class="brand-mark"><img src="assets/belle-house-logo.png" alt="Belle House"></span><span class="brand-copy"><span class="brand-name">Belle House</span><span class="brand-sub">Niger · Construction</span></span></a><div class="footer-links"><a href="a-propos.html">À propos</a><a href="services.html">Services</a><a href="realisations.html">Réalisations</a><a href="contact.html">Contact</a><a href="mailto:contact@bellehouseniger.com">Email</a></div></div>
+      <div class="footer-main"><a class="brand" href="#top" aria-label="Retour en haut"><span class="brand-mark"><img src="assets/belle-house-logo.png" alt="Belle House"></span><span class="brand-copy"><span class="brand-name">Belle House</span><span class="brand-sub">Niger · Construction</span></span></a><div class="footer-links"><a href="a-propos.html">À propos</a><a href="services.html">Services</a><a href="realisations.html">Réalisations</a><a href="media.html">Médias</a><a href="recrutement.html">Recrutement</a><a href="recherche.html">Rechercher</a><a href="contact.html">Contact</a><a href="mailto:contact@bellehouseniger.com">Email</a></div></div>
       <div class="footer-bottom"><span>© 2026 Belle House Niger. Tous droits réservés.</span><span>Construire avec confiance, à Niamey et au-delà.</span></div>
     </div>
   </footer>
@@ -566,6 +625,7 @@
     <button type="button" id="mobile-chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 11.5a8 8 0 0 1-8 8c-1.3 0-2.5-.3-3.6-.9L4 20l1.4-3.8A8 8 0 1 1 20 11.5Z"/><path d="M8 12h.01M12 12h.01M16 12h.01" stroke-linecap="round"/></svg><span>Chat IA</span></button>
   </div>
 
+  <script src="assets/nav.js"></script>
   <script>
     (() => {
       const header = document.getElementById('site-header');
@@ -580,9 +640,37 @@
       const chatForm = document.getElementById('chat-form');
       const chatInput = document.getElementById('chat-input');
       const hero = document.querySelector('.hero');
+      const heroCopy = document.getElementById('hero-copy');
+      const heroEyebrow = document.getElementById('hero-eyebrow');
+      const heroTitle = document.getElementById('hero-title');
+      const heroLede = document.getElementById('hero-lede');
+      const heroScenes = [...document.querySelectorAll('.hero-scene')];
       const heroStep = document.getElementById('hero-step');
       const heroStory = [...document.querySelectorAll('.hero-story li')];
+      const heroContent = [
+        { eyebrow: 'Écouter le besoin', title: '<span>Un projet commence</span><span>par une <em>bonne écoute.</em></span>', lede: 'Avant les plans et les premiers travaux, nous prenons le temps de comprendre votre terrain, vos usages et vos priorités.' },
+        { eyebrow: 'Concevoir avec précision', title: '<span>Dessiner une <em>direction</em></span><span>claire.</span>', lede: 'Plans, choix techniques et budget avancent ensemble pour donner à votre projet une direction lisible.' },
+        { eyebrow: 'Construire avec méthode', title: '<span>Construire avec</span><span><em>méthode.</em></span>', lede: 'Sur le terrain, nous coordonnons les métiers, suivons les étapes et gardons les décisions importantes visibles.' },
+        { eyebrow: 'Livrer un lieu durable', title: '<span>Livrer un lieu</span><span>qui vous <em>ressemble.</em></span>', lede: 'Chaque finition compte. Nous avançons jusqu’à la remise des clés avec la même exigence qu’au premier échange.' },
+        { eyebrow: 'Bâtisseur de confiance', title: '<span>Construire <em>mieux.</em></span><span>Vivre <em>pleinement.</em></span>', lede: 'De la conception à la livraison, Belle House vous accompagne avec rigueur, clarté et passion pour donner une forme durable à vos projets au Niger.' }
+      ];
+      let currentHeroContent = -1;
+      let heroSwitchTimer = 0;
       let heroFrame = 0;
+
+      const showHeroContent = index => {
+        if (index === currentHeroContent || !heroCopy) return;
+        currentHeroContent = index;
+        heroCopy.classList.add('is-switching');
+        window.clearTimeout(heroSwitchTimer);
+        heroSwitchTimer = window.setTimeout(() => {
+          const content = heroContent[index];
+          heroEyebrow.textContent = content.eyebrow;
+          heroTitle.innerHTML = content.title;
+          heroLede.textContent = content.lede;
+          heroCopy.classList.remove('is-switching');
+        }, 180);
+      };
 
       const onScroll = () => {
         header.classList.toggle('scrolled', window.scrollY > 30);
@@ -593,11 +681,18 @@
           const heroRange = Math.max(1, hero.offsetHeight - window.innerHeight);
           const progress = Math.min(1, Math.max(0, (window.scrollY - heroTop) / heroRange));
           hero.style.setProperty('--hero-shift', (progress * -74).toFixed(2));
-          hero.style.setProperty('--hero-opacity', (1 - progress * .78).toFixed(3));
+          hero.style.setProperty('--hero-opacity', (1 - Math.max(0, progress - .78) * .1).toFixed(3));
           hero.style.setProperty('--hero-scale', (progress * .035).toFixed(3));
           hero.style.setProperty('--hero-orbit-x', (progress * -46).toFixed(2));
           hero.style.setProperty('--hero-orbit-y', (progress * 34).toFixed(2));
           hero.style.setProperty('--hero-axis-y', (progress * 86).toFixed(2));
+          const finality = Math.min(1, Math.max(0, (progress - .78) / .22));
+          const activeScene = Math.min(heroScenes.length - 1, Math.floor(Math.min(.779, progress) / .78 * heroScenes.length));
+          const finalScene = finality > 0;
+          hero.style.setProperty('--hero-final', finality.toFixed(3));
+          hero.classList.toggle('scene-final', finalScene);
+          heroScenes.forEach((scene, index) => scene.classList.toggle('active', index === activeScene));
+          showHeroContent(finalScene ? 4 : activeScene);
           const activeStory = Math.min(heroStory.length - 1, Math.floor(progress * heroStory.length));
           heroStory.forEach((item, index) => item.classList.toggle('active', index === activeStory));
           if (heroStep) heroStep.textContent = `0${activeStory + 1} / 04`;

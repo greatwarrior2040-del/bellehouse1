@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Écoute et cadrage d'un projet de construction</title>
+  <desc id="desc">Composition abstraite bleu nuit avec plan, repères et lignes de dialogue.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#062b47"/><stop offset="1" stop-color="#0f5c8e"/></linearGradient><linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff" stop-opacity=".16"/><stop offset="1" stop-color="#fff" stop-opacity=".03"/></linearGradient></defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <circle cx="1180" cy="310" r="310" fill="none" stroke="#8fc4dc" stroke-opacity=".28" stroke-width="2"/><circle cx="1180" cy="310" r="205" fill="none" stroke="#ee0b45" stroke-opacity=".55" stroke-width="2"/><circle cx="1180" cy="310" r="94" fill="none" stroke="#fff" stroke-opacity=".24" stroke-width="2"/>
+  <path d="M0 740 450 540l390 80 760-310M0 890l440-210 420 80 740-320" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="2"/>
+  <path d="M260 220h410v260H260zM320 280h280M320 340h220M320 400h160" fill="url(#glass)" stroke="#fff" stroke-opacity=".6" stroke-width="3"/>
+  <path d="M260 520h410v210H260zM320 580h280M320 640h220M320 700h160" fill="none" stroke="#ee0b45" stroke-opacity=".7" stroke-width="3"/>
+  <path d="M760 720h420v120H760z" fill="none" stroke="#fff" stroke-opacity=".48" stroke-width="3"/><path d="M860 720v120M1020 720v120" stroke="#fff" stroke-opacity=".22" stroke-width="2"/>
+  <g fill="#ee0b45"><circle cx="260" cy="220" r="8"/><circle cx="670" cy="480" r="8"/><circle cx="1180" cy="310" r="8"/></g>
+</svg>

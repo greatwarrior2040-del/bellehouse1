@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rechercher | Belle House Niger</title>
+  <meta name="description" content="Recherchez une information sur les services, les projets et les contacts Belle House Niger.">
+  <meta name="theme-color" content="#001f3b"><meta name="robots" content="noindex,follow"><link rel="canonical" href="https://www.bellehouseniger.com/recherche.html">
+  <meta property="og:type" content="website"><meta property="og:locale" content="fr_NE"><meta property="og:site_name" content="Belle House Niger"><meta property="og:url" content="https://www.bellehouseniger.com/recherche.html"><meta property="og:title" content="Rechercher | Belle House Niger"><meta property="og:description" content="Recherchez une information sur les services, les projets et les contacts Belle House Niger."><meta property="og:image" content="https://www.bellehouseniger.com/assets/belle-house-logo.png"><meta property="og:image:alt" content="Logo Belle House Niger"><meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SearchResultsPage","name":"Rechercher | Belle House Niger","url":"https://www.bellehouseniger.com/recherche.html","description":"Recherchez une information sur les services, les projets et les contacts Belle House Niger.","inLanguage":"fr-NE","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.bellehouseniger.com/"},{"@type":"ListItem","position":2,"name":"Rechercher","item":"https://www.bellehouseniger.com/recherche.html"}]}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/pages.css"><link rel="stylesheet" href="assets/nav.css">
+</head>
+<body class="inner-page" data-page="search">
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="site-header" id="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark"><img src="assets/belle-house-logo.png" alt="Belle House"></span><span class="brand-copy"><span class="brand-name">Belle House</span><span class="brand-sub">Niger · Construction</span></span></a><nav class="primary-nav" aria-label="Navigation principale"><a data-page="about" href="a-propos.html">Qui sommes-nous ?</a><a data-page="services" href="services.html">Nos services</a><a data-page="projects" href="realisations.html">Nos réalisations</a><a href="a-propos.html#values">Nos engagements</a><a data-page="contact" href="contact.html">Contact</a></nav><a class="header-cta" href="contact.html">Parler à un expert <span class="arrow">↗</span></a><button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button></div></header>
+  <main id="main" tabindex="-1">
+    <section class="page-hero"><div class="container"><span class="page-breadcrumb">Belle House · Recherche</span><h1>Trouver la bonne <em>information.</em></h1><p>Services, projets, contact ou recrutement : commencez par un mot.</p></div></section>
+    <section class="page-main band-light"><div class="container"><div class="search-page-box page-reveal"><span class="eyebrow">Recherche</span><h2>Que cherchez-vous ?</h2><form class="search-form" id="page-search-form"><input id="page-search-input" aria-label="Votre recherche" placeholder="Construction, projet, contact..." autocomplete="off"><button type="submit" aria-label="Rechercher">↗</button></form><div class="search-hints"><a href="services.html">Construction</a><a href="realisations.html">Réalisations</a><a href="media.html">Médias</a><a href="recrutement.html">Recrutement</a></div><div class="search-results show" id="page-search-results"></div></div></div></section>
+  </main>
+  <footer class="footer"><div class="container"><div class="footer-main"><a class="brand" href="index.html"><span class="brand-mark"><img src="assets/belle-house-logo.png" alt="Belle House"></span><span class="brand-copy"><span class="brand-name">Belle House</span><span class="brand-sub">Niger · Construction</span></span></a><div class="footer-links"><a href="a-propos.html">À propos</a><a href="services.html">Services</a><a href="realisations.html">Réalisations</a><a href="media.html">Médias</a><a href="recrutement.html">Recrutement</a><a href="contact.html">Contact</a></div></div><div class="footer-bottom"><span>© 2026 Belle House Niger. Tous droits réservés.</span><span>Construire avec confiance, à Niamey et au-delà.</span></div></div></footer>
+  <div class="page-mobile-cta"><a href="tel:+22792005454" aria-label="Appeler Belle House">☎<span>Appeler</span></a><a href="https://wa.me/22792005454?text=Bonjour%20Belle%20House%2C%20je%20souhaite%20parler%20de%20mon%20projet." target="_blank" rel="noopener" aria-label="Écrire à Belle House sur WhatsApp">◌<span>Message</span></a><button type="button" data-open-chat aria-label="Ouvrir le chatbot IA">◍<span>Chat IA</span></button></div>
+  <script src="assets/nav.js"></script><script src="assets/pages.js"></script>
+  <script>
+    (() => {
+      const input = document.getElementById('page-search-input');
+      const box = document.getElementById('page-search-results');
+      const results = [['Construction','services.html#construction','Service'],['Ferraillage','services.html#ferraillage','Service'],['Ingénierie BTP','services.html#ingenierie','Service'],['Nos réalisations','realisations.html','Projet'],['Les actualités','media.html','Média'],['Rejoindre Belle House','recrutement.html','Recrutement'],['Nous contacter','contact.html','Contact']];
+      const draw = () => { const q = input.value.trim().toLowerCase(); const filtered = q ? results.filter(([label,,type]) => `${label} ${type}`.toLowerCase().includes(q)) : results; box.innerHTML = filtered.map(([label,href,type]) => `<a class="search-result" href="${href}"><strong>${label}</strong><span>${type} ↗</span></a>`).join('') || '<div class="search-result"><strong>Aucun résultat</strong><span>Essayez un autre mot</span></div>'; };
+      input.addEventListener('input', draw); document.getElementById('page-search-form').addEventListener('submit', event => { event.preventDefault(); draw(); }); draw();
+    })();
+  </script>
+</body>
+</html>

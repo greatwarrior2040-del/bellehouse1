@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Livraison d'un bâtiment durable</title>
+  <desc id="desc">Bâtiment contemporain achevé dans une lumière bleu et rose.</desc>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8fc4dc"/><stop offset=".52" stop-color="#0f5c8e"/><stop offset="1" stop-color="#001f3b"/></linearGradient><linearGradient id="facade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff" stop-opacity=".92"/><stop offset="1" stop-color="#8fc4dc" stop-opacity=".42"/></linearGradient></defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/><circle cx="1260" cy="190" r="100" fill="#fff" fill-opacity=".5"/>
+  <path d="M0 820 350 640l410 110 390-210 450 170v290H0z" fill="#001f3b" fill-opacity=".7"/>
+  <path d="M260 820V390l310-160 330 160v430z" fill="url(#facade)" stroke="#fff" stroke-opacity=".8" stroke-width="4"/><path d="M570 230v590M260 390h640M260 510h640M260 640h640" stroke="#0f5c8e" stroke-opacity=".6" stroke-width="4"/>
+  <g fill="#001f3b" fill-opacity=".72"><path d="M340 430h130v50H340zM660 430h130v50H660zM340 550h130v50H340zM660 550h130v50H660zM340 680h130v70H340zM660 680h130v70H660z"/></g>
+  <path d="M1050 820V470l220-120 210 120v350z" fill="none" stroke="#fff" stroke-opacity=".46" stroke-width="4"/><path d="M1050 560h430M1050 680h430" stroke="#ee0b45" stroke-width="4"/><path d="M0 870h1600" stroke="#ee0b45" stroke-width="6"/>
+  <g fill="#ee0b45"><circle cx="260" cy="390" r="9"/><circle cx="900" cy="390" r="9"/><circle cx="1270" cy="350" r="9"/></g>
+</svg>

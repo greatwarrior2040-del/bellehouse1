@@ -3,7 +3,7 @@
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; overflow-x:hidden; }
 body { margin:0; color:var(--ink); background:var(--canvas); font-family:"DM Sans",Arial,sans-serif; overflow-x:hidden; }
-body::before { content:""; position:fixed; inset:0; z-index:-1; pointer-events:none; background:radial-gradient(circle at 12% 14%,rgba(143,196,220,.16),transparent 28%),radial-gradient(circle at 92% 72%,rgba(229,185,103,.13),transparent 30%); }
+body::before { content:""; position:fixed; inset:0; z-index:-1; pointer-events:none; background:radial-gradient(circle at 12% 14%,rgba(143,196,220,.16),transparent 28%),radial-gradient(circle at 92% 72%,rgba(238,11,69,.08),transparent 30%); }
 a { color:inherit; text-decoration:none; }
 button,input,textarea { font:inherit; }
 button { border:0; cursor:pointer; }
@@ -124,6 +124,43 @@ img { max-width:100%; display:block; }
 .page-cta h2 { margin: 0; max-width: 680px; font: 500 clamp(32px, 4.6vw, 62px)/.98 "Space Grotesk", sans-serif; letter-spacing: -.06em; }
 .page-cta .btn { color: var(--ink); background: var(--gold, #e5b967); }
 .inner-page .footer { margin-top: 0; }
+.detail-band { padding: 0 0 116px; background: var(--panel, #fffaf3); }
+.detail-topline { min-height: 108px; display: flex; align-items: center; justify-content: space-between; color: #fff; background: var(--navy, #0f2940); }
+.detail-topline .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.detail-topline-label { display: inline-flex; align-items: center; gap: 16px; color: rgba(255,255,255,.62); font-size: 10px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
+.detail-topline-label b { color: var(--gold, #e5b967); font-size: 20px; font-weight: 500; }
+.detail-next { width: 96px; height: 108px; display: grid; place-items: center; color: #fff; background: var(--gold, #e5b967); font-size: 34px; transition: background .25s var(--ease); }
+.detail-next:hover { background: #c9093a; }
+.detail-layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 70px; align-items: start; }
+.detail-main-media { margin-top: -96px; position: relative; z-index: 1; }
+.detail-main-media img { width: 100%; aspect-ratio: 1.48; object-fit: cover; border: 1px solid rgba(16,40,59,.1); box-shadow: 0 22px 60px rgba(15,41,64,.14); }
+.detail-gallery-nav { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding-top: 34px; }
+.detail-count { display: flex; align-items: center; gap: 28px; min-width: 55%; color: var(--ink); font: 600 12px/1 "Space Grotesk", sans-serif; letter-spacing: .12em; }
+.detail-count::after { content: ""; height: 1px; flex: 1; background: var(--line); }
+.detail-arrows { display: flex; gap: 10px; }
+.detail-arrows button { width: 48px; height: 48px; color: var(--blue); border: 1px solid var(--line); border-radius: 50%; background: transparent; font-size: 24px; }
+.detail-arrows button:hover { color: #fff; border-color: var(--blue); background: var(--blue); }
+.detail-summary { padding-top: 38px; }
+.detail-summary h1, .detail-summary h2 { margin: 0 0 16px; color: var(--ink); font: 500 clamp(39px, 5vw, 70px)/.96 "Space Grotesk", sans-serif; letter-spacing: -.065em; }
+.detail-summary h1 em, .detail-summary h2 em { color: var(--blue); font-style: normal; }
+.detail-summary > p { max-width: 640px; color: var(--ink-soft); font-size: 16px; line-height: 1.75; }
+.detail-data { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 34px; margin-top: 24px; }
+.detail-data div { padding: 22px 0; border-bottom: 1px solid var(--line); }
+.detail-data dt { margin-bottom: 8px; color: var(--ink-soft); font-size: 11px; font-weight: 700; }
+.detail-data dd { margin: 0; color: var(--ink); font: 600 16px/1.2 "Space Grotesk", sans-serif; }
+.detail-story { max-width: 760px; margin: 34px auto 0; padding: 0 0 0 122px; color: var(--ink); font-size: 17px; line-height: 1.75; }
+.detail-story::before { content: "Belle House"; display: block; margin-bottom: 14px; color: var(--blue); font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.detail-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 70px; }
+.detail-gallery img { width: 100%; aspect-ratio: 1.45; object-fit: cover; border: 1px solid var(--line); transition: transform .5s var(--soft-ease); }
+.detail-gallery a:hover img { transform: translateY(-5px); }
+.search-page-box { max-width: 900px; padding: 40px; border: 1px solid var(--line); background: var(--panel); }
+.search-page-box h2 { margin: 0 0 24px; color: var(--ink); font: 500 clamp(34px, 4.5vw, 58px)/1 "Space Grotesk", sans-serif; letter-spacing: -.05em; }
+.search-page-box .search-form { display: grid; grid-template-columns: 1fr 54px; gap: 8px; }
+.search-page-box .search-form input { min-width: 0; border: 1px solid var(--line); padding: 15px 16px; color: var(--ink); background: #fff; }
+.search-page-box .search-form button { color: #fff; background: var(--blue); }
+.search-page-box .search-hints { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.search-page-box .search-hints a { padding: 8px 10px; color: var(--blue); border: 1px solid var(--line); font-size: 11px; font-weight: 700; }
+.search-page-box .search-results { margin-top: 20px; }
 .page-reveal { opacity: 0; transform: translateY(22px); transition: opacity .75s var(--soft-ease, cubic-bezier(.16,1,.3,1)), transform .75s var(--soft-ease, cubic-bezier(.16,1,.3,1)); }
 .page-reveal.in { opacity: 1; transform: none; }
 .page-reveal.delay-1 { transition-delay: .08s; }
@@ -178,6 +215,21 @@ img { max-width:100%; display:block; }
   .page-cta-inner { display: grid; gap: 24px; }
   .page-cta .btn { width: 100%; }
   .page-chat { right: 16px; bottom: 82px; }
+  .detail-band { padding-bottom: 92px; }
+  .detail-topline { min-height: 76px; }
+  .detail-topline .container { width: calc(100% - 32px); }
+  .detail-next { width: 58px; height: 76px; margin-right: -16px; }
+  .detail-layout { grid-template-columns: 1fr; gap: 26px; }
+  .detail-main-media { margin-top: -28px; }
+  .detail-gallery-nav { padding-top: 20px; }
+  .detail-count { gap: 12px; min-width: 0; font-size: 10px; }
+  .detail-arrows button { width: 40px; height: 40px; }
+  .detail-summary { padding-top: 0; }
+  .detail-data { gap: 0 18px; }
+  .detail-data dd { font-size: 14px; }
+  .detail-story { margin-top: 28px; padding-left: 0; font-size: 14px; }
+  .detail-gallery { grid-template-columns: 1fr 1fr; margin-top: 48px; }
+  .search-page-box { padding: 24px 18px; }
   .page-mobile-cta { position: fixed; z-index: 55; right: 0; bottom: 0; left: 0; height: 66px; display: grid; grid-template-columns: repeat(3, 1fr); padding: 6px; gap: 6px; color: #fff; background: rgba(15,41,64,.96); box-shadow: 0 -8px 28px rgba(15,41,64,.16); backdrop-filter: blur(14px); }
   .page-mobile-cta a, .page-mobile-cta button { display: grid; place-items: center; align-content: center; gap: 3px; color: #fff; background: transparent; font-size: 10px; font-weight: 700; }
   .page-mobile-cta a:first-child { color: var(--ink); background: var(--gold); }

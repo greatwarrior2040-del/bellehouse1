@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Construction et suivi de chantier</title>
+  <desc id="desc">Silhouette d'un bâtiment en construction avec grue et trames techniques.</desc>
+  <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0f5c8e"/><stop offset="1" stop-color="#001f3b"/></linearGradient><linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8fc4dc" stop-opacity=".65"/><stop offset="1" stop-color="#fff" stop-opacity=".08"/></linearGradient></defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <path d="M0 820h1600v180H0z" fill="#00162a"/><path d="M180 820V370h470v450zm470 0V250h360v570zm360 0V470h420v350z" fill="url(#glass)" stroke="#fff" stroke-opacity=".65" stroke-width="4"/>
+  <g stroke="#fff" stroke-opacity=".35" stroke-width="3"><path d="M180 500h470M180 620h470M180 740h470M650 410h360M650 550h360M650 690h360M1010 600h420M1010 710h420"/><path d="M285 370v450M390 370v450M495 370v450M755 250v570M870 250v570M1120 470v350M1250 470v350M1380 470v350"/></g>
+  <path d="M990 260V110h500M1210 110v-80M1210 110 1040 430M1210 110l230 360" fill="none" stroke="#ee0b45" stroke-width="7"/><rect x="1178" y="84" width="65" height="52" fill="#ee0b45"/>
+  <path d="M0 870h1600" stroke="#ee0b45" stroke-width="6"/><g fill="#fff"><circle cx="340" cy="870" r="12"/><circle cx="810" cy="870" r="12"/><circle cx="1280" cy="870" r="12"/></g>
+</svg>

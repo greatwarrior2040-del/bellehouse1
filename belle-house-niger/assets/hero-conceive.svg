@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Conception architecturale et ingénierie BTP</title>
+  <desc id="desc">Plan architectural stylisé sur fond bleu avec volumes et tracés roses.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#001f3b"/><stop offset=".62" stop-color="#0f5c8e"/><stop offset="1" stop-color="#8fc4dc"/></linearGradient></defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <g fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="3"><path d="M140 790 520 140l430 260 330-210 210 490-540 190z"/><path d="M520 140 510 540l440 270 330-210"/><path d="M510 540 140 790"/><path d="M950 400 940 810"/><path d="M1180 190 1160 600"/></g>
+  <g fill="none" stroke="#ee0b45" stroke-width="4"><path d="M260 710h440V400h-260v-120"/><path d="M700 710h420V490H900"/><path d="M480 400h220"/></g>
+  <g fill="#fff" fill-opacity=".1"><path d="m140 790 380-650 430 260-430 290z"/><path d="m950 400 330-210 210 490-550 130z"/></g>
+  <g fill="#ee0b45"><circle cx="520" cy="140" r="9"/><circle cx="950" cy="400" r="9"/><circle cx="1160" cy="600" r="9"/></g>
+</svg>
